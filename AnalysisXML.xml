@@ -1,0 +1,318 @@
+<saw:report xmlns:saw="com.siebel.analytics.web/report/v1.1" xmlns:sawx="com.siebel.analytics.web/expression/v1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlVersion="201201160">   
+   <saw:criteria xsi:type="saw:customizedSqlCriteria">      
+      <saw:columns>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c6351201e9882e8fe">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">a</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>a</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Person Number</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c21efaecba64ed0ef">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">a1</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>a1</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Name</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="ca5d5a544d6f85ca5">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">d</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>d</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Date</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c07edd4d1cf51ffdd">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">b</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>b</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Action Name</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="ce3838fb076faa39c">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">f</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>f</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Business Unit(C)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c4aa462ca4db1af39">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">h</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>h</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Department(C)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="cec551b937a3dfd35">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">j</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>j</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Grade(C)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="cf63cb9f433a40cbb">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">l</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>l</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Job(C)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c7ba4d2d7daa3b212">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">n</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>n</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Location(C)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c6dd4901a16087df5">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">p</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>p</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Position(C)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c63e6f64fa85c1eb1">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">e</sawx:expr></saw:columnFormula>            
+            <saw:displayFormat>               
+               <saw:formatSpec visibility="hidden" suppress="suppress" wrapText="true"/></saw:displayFormat>            
+            <saw:columnHeading>               
+               <saw:displayFormat>                  
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="cc2f18ae2cf60f229">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">c</sawx:expr></saw:columnFormula>            
+            <saw:displayFormat>               
+               <saw:formatSpec visibility="hidden" suppress="suppress" wrapText="true"/></saw:displayFormat>            
+            <saw:columnHeading>               
+               <saw:displayFormat>                  
+                  <saw:formatSpec/></saw:displayFormat></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c08af9ef875738f7e">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">g</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>g</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Business Unit(P)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c476b87af7f90c1a0">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">i</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>i</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Department(P)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c11a0ff0cf371ddf9">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">k</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>k</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Grade(P)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c6491e937d38b008a">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">m</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>m</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Job(P)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="c5b42f9e4dbf761cc">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">o</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>o</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Location(P)</saw:text></saw:caption></saw:columnHeading></saw:column>         
+         <saw:column xsi:type="saw:regularColumn" columnID="caab28424888e5441">            
+            <saw:columnFormula>               
+               <sawx:expr xsi:type="sawx:sqlExpression">q</sawx:expr></saw:columnFormula>            
+            <saw:tableHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>q</saw:text></saw:caption></saw:tableHeading>            
+            <saw:columnHeading>               
+               <saw:caption fmt="text">                  
+                  <saw:text>Position(P)</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column columnID="c47be942a081c1d8d" xsi:type="saw:regularColumn">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(f,'-1')=IFNULL(g,'-1') THEN 'N' ELSE 'Y' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>BUChanged</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>HasBUChanged</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column columnID="c893cf40fe0b09b5e" xsi:type="saw:regularColumn">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(h,'-1')=IFNULL(i,'-1') THEN 'N' ELSE 'Y' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>DeptChanged</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>HasDeptChanged</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column columnID="c847416921afa242d" xsi:type="saw:regularColumn">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(j,'-1')=IFNULL(k,'-1') THEN 'N' ELSE 'Y' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>GradeChanged</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>HasGradeChanged</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column columnID="cb24eaa7157b6660b" xsi:type="saw:regularColumn">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(l,'-1')=IFNULL(m,'-1') THEN 'N' ELSE 'Y' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>JobChanged</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>HasJobChanged</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column columnID="c1d123a414251cb0f" xsi:type="saw:regularColumn">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(n,'-1')=IFNULL(o,'-1') THEN 'N' ELSE 'Y' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>LocationChanged</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>HasLocationChanged</saw:text></saw:caption></saw:columnHeading></saw:column>
+         <saw:column columnID="c08f1965f35f9c452" xsi:type="saw:regularColumn">
+            <saw:columnFormula>
+               <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(p,'-1')=IFNULL(q,'-1') THEN 'N' ELSE 'Y' END</sawx:expr></saw:columnFormula>
+            <saw:tableHeading>
+               <saw:caption fmt="text">
+                  <saw:text>PositionChanged</saw:text></saw:caption></saw:tableHeading>
+            <saw:columnHeading>
+               <saw:caption fmt="text">
+                  <saw:text>HasPositionChanged</saw:text></saw:caption></saw:columnHeading></saw:column></saw:columns>      
+      <saw:from>(
+SELECT A.A_3 a, A.A_3A a1,
+A.A_1 b,B.B_1 c,
+A.A_2 d, B.B_2 e,
+A.A_11 f,B.B_11 g,
+A.A_12 h, B.B_12 i,
+A.A_13 j, B.B_13 k,
+A.A_14 l, B.B_14 m,
+A.A_15 n, B.B_15 o,
+A.A_16 p, B.B_16 q
+FROM 
+(SELECT
+   0 A_0,
+   "Workforce Management - Worker Assignment Event Real Time"."Worker"."Person Number" A_3,
+   "Workforce Management - Worker Assignment Event Real Time"."Worker"."Employee Name" A_3A,
+   "Workforce Management - Worker Assignment Event Real Time"."Time"."Date" A_2,
+   "Workforce Management - Worker Assignment Event Real Time"."HR Action"."Action Name" A_1,  
+   RCOUNT(1) A_4,
+   "Workforce Management - Worker Assignment Event Real Time"."Business Unit"."Business Unit Name" A_11,
+   "Workforce Management - Worker Assignment Event Real Time"."Department"."Department Name" A_12,
+   "Workforce Management - Worker Assignment Event Real Time"."Grade"."Grade Name" A_13,
+   "Workforce Management - Worker Assignment Event Real Time"."Job"."Job Name" A_14,
+   "Workforce Management - Worker Assignment Event Real Time"."Location"."Worker Location Name" A_15,
+   "Workforce Management - Worker Assignment Event Real Time"."Position"."Position Name" A_16
+FROM "Workforce Management - Worker Assignment Event Real Time"
+WHERE
+TOPN(RCOUNT("Worker"."Person Number"),2) &lt;= 2 
+GROUP BY "Worker"."Person Number"
+
+
+) A,
+
+(SELECT
+   0 B_0,
+   "Workforce Management - Worker Assignment Event Real Time"."Worker"."Person Number" B_3,
+   "Workforce Management - Worker Assignment Event Real Time"."Time"."Date" B_2,
+   "Workforce Management - Worker Assignment Event Real Time"."HR Action"."Action Name" B_1,
+   RCOUNT(1) B_4,
+   "Workforce Management - Worker Assignment Event Real Time"."Business Unit"."Business Unit Name" B_11,
+   "Workforce Management - Worker Assignment Event Real Time"."Department"."Department Name" B_12,
+   "Workforce Management - Worker Assignment Event Real Time"."Grade"."Grade Name" B_13,
+   "Workforce Management - Worker Assignment Event Real Time"."Job"."Job Name" B_14,
+   "Workforce Management - Worker Assignment Event Real Time"."Location"."Worker Location Name" B_15,
+   "Workforce Management - Worker Assignment Event Real Time"."Position"."Position Name" B_16
+FROM "Workforce Management - Worker Assignment Event Real Time"
+WHERE
+TOPN(RCOUNT("Worker"."Person Number"),2) &lt;= 2 
+GROUP BY "Worker"."Person Number"
+
+) B
+WHERE A.A_4 = (B.B_4+1)
+AND A.A_3 = B.B_3
+) tj</saw:from>      
+      <saw:filter>
+         <sawx:expr op="equal" xsi:type="sawx:comparison">
+            <sawx:expr xsi:type="sawx:sqlExpression">CASE WHEN IFNULL(f,'-1')=IFNULL(g,'-1') THEN 'N' ELSE 'Y' END</sawx:expr>
+            <sawx:expr xsi:type="xsd:string">Y</sawx:expr></sawx:expr></saw:filter>
+      <saw:columnOrder/></saw:criteria>   
+   <saw:views currentView="0">      
+      <saw:view xsi:type="saw:compoundView" name="compoundView!1">         
+         <saw:cvTable>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="titleView!1">                  
+                  <saw:displayFormat>                     
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow>            
+            <saw:cvRow>               
+               <saw:cvCell viewName="tableView!1">                  
+                  <saw:displayFormat>                     
+                     <saw:formatSpec/></saw:displayFormat></saw:cvCell></saw:cvRow></saw:cvTable></saw:view>      
+      <saw:view xsi:type="saw:titleView" name="titleView!1"/>      
+      <saw:view xsi:type="saw:tableView" name="tableView!1" scrollingEnabled="false">         
+         <saw:edges>            
+            <saw:edge axis="page" showColumnHeader="true"/>            
+            <saw:edge axis="section"/>            
+            <saw:edge axis="row" showColumnHeader="true">               
+               <saw:edgeLayers>                  
+                  <saw:edgeLayer type="column" columnID="c6351201e9882e8fe"/>                  
+                  <saw:edgeLayer type="column" columnID="c21efaecba64ed0ef"/>                  
+                  <saw:edgeLayer type="column" columnID="ca5d5a544d6f85ca5"/>                  
+                  <saw:edgeLayer type="column" columnID="c07edd4d1cf51ffdd"/>                  
+                  <saw:edgeLayer type="column" columnID="ce3838fb076faa39c"/>                  
+                  <saw:edgeLayer type="column" columnID="c4aa462ca4db1af39"/>                  
+                  <saw:edgeLayer type="column" columnID="cec551b937a3dfd35"/>                  
+                  <saw:edgeLayer type="column" columnID="cf63cb9f433a40cbb"/>                  
+                  <saw:edgeLayer type="column" columnID="c7ba4d2d7daa3b212"/>                  
+                  <saw:edgeLayer type="column" columnID="c6dd4901a16087df5"/>                  
+                  <saw:edgeLayer type="column" columnID="c63e6f64fa85c1eb1"/>                  
+                  <saw:edgeLayer type="column" columnID="cc2f18ae2cf60f229"/>                  
+                  <saw:edgeLayer type="column" columnID="c08af9ef875738f7e"/>                  
+                  <saw:edgeLayer type="column" columnID="c476b87af7f90c1a0"/>                  
+                  <saw:edgeLayer type="column" columnID="c11a0ff0cf371ddf9"/>                  
+                  <saw:edgeLayer type="column" columnID="c6491e937d38b008a"/>                  
+                  <saw:edgeLayer type="column" columnID="c5b42f9e4dbf761cc"/>                  
+                  <saw:edgeLayer type="column" columnID="caab28424888e5441"/>
+                  <saw:edgeLayer type="column" columnID="c47be942a081c1d8d"/>
+                  <saw:edgeLayer type="column" columnID="c893cf40fe0b09b5e"/>
+                  <saw:edgeLayer type="column" columnID="c847416921afa242d"/>
+                  <saw:edgeLayer type="column" columnID="cb24eaa7157b6660b"/>
+                  <saw:edgeLayer type="column" columnID="c1d123a414251cb0f"/>
+                  <saw:edgeLayer type="column" columnID="c08f1965f35f9c452"/></saw:edgeLayers></saw:edge>            
+            <saw:edge axis="column" showColumnHeader="rollover"/></saw:edges></saw:view></saw:views></saw:report>
