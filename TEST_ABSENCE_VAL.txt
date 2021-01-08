@@ -1,0 +1,64 @@
+/******************************************************************************
+FORMULA NAME: TEST_ABSENCE_VAL
+FORMULA TYPE: Global Absence Entry Validation
+DESCRIPTION: Validation Formula to fetch person id
+Change History:
+Name	               Date	         Version  	Comments
+-----------------------------------------------------------------------
+Ashish Harbhajanka     7-Jan-2021    DRAFT 1A   Initial Version
+**********************************************************************/
+DEFAULT FOR IV_START_DATE IS '4712/12/31 00:00:00' (date)
+DEFAULT FOR IV_END_DATE IS '4712/12/31 00:00:00' (date)
+DEFAULT FOR IV_START_TIME IS '00:00'
+DEFAULT FOR IV_END_TIME IS '23:59'
+DEFAULT FOR PER_ASG_PERSON_NUMBER is 'X'
+DEFAULT FOR PER_ASG_MGR_PERSON_NUMBER is 'X'
+DEFAULT FOR PER_ASG_PERSON_ID is 0
+DEFAULT FOR PER_ASG_MANAGER_USER_PERSON_ID is 0
+DEFAULT FOR PER_ASG_MGR_MANAGER_ID is 0
+
+
+INPUTS ARE IV_START_DATE (date), 
+		   IV_END_DATE (date), 
+		   IV_START_TIME(text),
+		   IV_END_TIME(text)
+		   
+lc_valid = 'Y'
+personId = 0
+effectivedate = '1951/01/01 00:00:00' (date)
+ln_person_id = GET_CONTEXT(PERSON_ID,0)
+ld_effective_date = GET_CONTEXT(EFFECTIVE_DATE,'1951/01/01 00:00:00'(date))
+ln_per_person_id = ln_person_id
+lc_asg_person_number = PER_ASG_PERSON_NUMBER
+lc_mgr_person_number = PER_ASG_MGR_PERSON_NUMBER
+ln_asg_person_id = PER_ASG_PERSON_ID
+ln_mgr_person_id = PER_ASG_MGR_MANAGER_ID
+ln_mgr_user_person_id = PER_ASG_MANAGER_USER_PERSON_ID
+lc_logged_user_person_id = GET_VALUE_SET('GET_LOGGED_IN_USER_PERSON_ID')
+ln_logged_user_person_id = TO_NUMBER(lc_logged_user_person_id)
+
+CALL_FORMULA('GET_EMP_MGR_ADM_PERSON_ID',
+				personId 		     		> 'ln_person_id',
+				effectivedate        		> 'ld_effective_date',
+				ln_per_person_id            <  'ln_per_person_id' 			DEFAULT 0,
+				lc_asg_person_number 		<  'lc_asg_person_number'		DEFAULT 'X',
+                lc_mgr_person_number 		<  'lc_mgr_person_number'		DEFAULT 'X',
+                ln_asg_person_id     		<  'ln_asg_person_id'			DEFAULT 0,
+                ln_mgr_person_id     		<  'ln_mgr_person_id'			DEFAULT 0,
+                ln_mgr_user_person_id		<  'ln_mgr_user_person_id'		DEFAULT 0,	
+                ln_logged_user_person_id    <  'ln_logged_user_person_id'	DEFAULT 0				
+			)
+
+VALID = 'N'
+ERROR_MESSAGE = 'LN_PER_PID : ' || to_char(ln_per_person_id)
+                || ' ASG_PN: ' || lc_asg_person_number
+				|| ' MGR_PN: ' || lc_mgr_person_number
+				|| ' ASG_PID: ' || to_char(ln_asg_person_id)
+				|| ' MGR_PID: ' || to_char(ln_mgr_person_id)
+				|| ' MGR_USER_PID: ' || to_char(ln_mgr_user_person_id)
+				|| ' LC_LOGGED_USER_PID: ' || lc_logged_user_person_id
+				|| ' LN_LOGGED_USER_PID: ' || to_char(ln_logged_user_person_id)
+RETURN VALID,ERROR_MESSAGE
+
+VALID = lc_valid
+RETURN VALID

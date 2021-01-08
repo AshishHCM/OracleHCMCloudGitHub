@@ -1,0 +1,73 @@
+/******************************************************************************
+FORMULA NAME: GET_USER_FLAG
+FORMULA TYPE: Payroll Access to HR
+DESCRIPTION: Used to Identify whether logged in person is Employee, Line Manager or HR Admin based on GUID
+CONTEXT    : PERSON_ID,EFFECTIVE_DATE
+Change History:
+Name	               Date	         Version  	Comments
+-----------------------------------------------------------------------
+Ashish Harbhajanka     7-Jan-2021    DRAFT 1A   Initial Version
+**********************************************************************/
+DEFAULT FOR IV_START_DATE IS '4712/12/31 00:00:00' (date)
+DEFAULT FOR IV_END_DATE IS '4712/12/31 00:00:00' (date)
+DEFAULT FOR IV_START_TIME IS '00:00'
+DEFAULT FOR IV_END_TIME IS '23:59'
+DEFAULT FOR PER_ASG_PERSON_NUMBER is 'X'
+DEFAULT FOR PER_ASG_MGR_PERSON_NUMBER is 'X'
+DEFAULT FOR PER_ASG_PERSON_ID is 0
+DEFAULT FOR PER_ASG_MANAGER_USER_PERSON_ID is 0
+DEFAULT FOR PER_ASG_MGR_MANAGER_ID is 0
+DEFAULT FOR PER_PER_USER_GUID is 'X'
+DEFAULT FOR PER_ASG_MANAGER_USER_USER_GUID is 'X'
+
+
+INPUTS ARE personId,effectivedate
+
+ln_person_id = GET_CONTEXT(PERSON_ID,0)
+ln_per_person_id = ln_person_id
+lc_asg_person_number = PER_ASG_PERSON_NUMBER
+lc_mgr_person_number = PER_ASG_MGR_PERSON_NUMBER
+ln_asg_person_id = PER_ASG_PERSON_ID
+ln_mgr_person_id = PER_ASG_MGR_MANAGER_ID
+ln_mgr_user_person_id = PER_ASG_MANAGER_USER_PERSON_ID
+lc_logged_user_person_id = GET_VALUE_SET('GET_LOGGED_IN_USER_PERSON_ID')
+ln_logged_user_person_id = TO_NUMBER(lc_logged_user_person_id)
+lc_per_user_guid = PER_PER_USER_GUID
+lc_mgr_user_guid = PER_ASG_MANAGER_USER_USER_GUID
+ln_length = LENGTH(lc_logged_user_person_id)
+/*
+lc_current_user_guid = FND_GLOBAL.USER_GUID
+*/
+lc_user_flag = 'X'
+
+IF ln_length > 0
+THEN
+	(
+		IF (ln_logged_user_person_id = ln_per_person_id)
+		THEN
+			lc_flag = 'EMP'
+		ELSE
+			IF (ln_logged_user_person_id = ln_mgr_person_id)
+			THEN	
+				lc_flag = 'MGR'
+			ELSE
+			lc_flag = 'ADMIN'
+	)
+
+/*
+IF lc_current_user_guid IS NOT NULL
+THEN
+	(
+		IF (lc_current_user_guid = ln_per_user_guid)
+		THEN
+			lc_flag = 'EMP'
+		ELSIF (lc_current_user_guid = lc_mgr_user_guid)
+		THEN	
+			lc_flag = 'MGR'
+		ELSE
+			lc_flag = 'ADMIN'
+	)
+*/
+
+lc_user_flag = lc_flag
+RETURN lc_user_flag

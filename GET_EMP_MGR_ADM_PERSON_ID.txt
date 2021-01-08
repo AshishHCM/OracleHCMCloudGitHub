@@ -1,0 +1,47 @@
+/******************************************************************************
+FORMULA NAME: GET_EMP_MGR_ADM_PERSON_ID
+FORMULA TYPE: Payroll Access to HR
+DESCRIPTION: Get Value of Employee, LineManager and Administrator's person_id using DBIs
+CONTEXT    : PERSON_ID,EFFECTIVE_DATE
+Change History:
+Name	               Date	         Version  	Comments
+-----------------------------------------------------------------------
+Ashish Harbhajanka     7-Jan-2021    DRAFT 1A   Initial Version
+**********************************************************************/
+DEFAULT FOR IV_START_DATE IS '4712/12/31 00:00:00' (date)
+DEFAULT FOR IV_END_DATE IS '4712/12/31 00:00:00' (date)
+DEFAULT FOR IV_START_TIME IS '00:00'
+DEFAULT FOR IV_END_TIME IS '23:59'
+DEFAULT FOR PER_ASG_PERSON_NUMBER is 'X'
+DEFAULT FOR PER_ASG_MGR_PERSON_NUMBER is 'X'
+DEFAULT FOR PER_ASG_PERSON_ID is 0
+DEFAULT FOR PER_ASG_MANAGER_USER_PERSON_ID is 0
+DEFAULT FOR PER_ASG_MGR_MANAGER_ID is 0
+
+
+INPUTS ARE personId,effectivedate
+		   
+lc_valid = 'Y'
+ln_person_id = GET_CONTEXT(PERSON_ID,0)
+ln_per_person_id = personId
+lc_asg_person_number = PER_ASG_PERSON_NUMBER
+lc_mgr_person_number = PER_ASG_MGR_PERSON_NUMBER
+ln_asg_person_id = PER_ASG_PERSON_ID
+ln_mgr_person_id = PER_ASG_MGR_MANAGER_ID
+ln_mgr_user_person_id = PER_ASG_MANAGER_USER_PERSON_ID
+lc_logged_user_person_id = GET_VALUE_SET('GET_LOGGED_IN_USER_PERSON_ID')
+ln_logged_user_person_id = TO_NUMBER(lc_logged_user_person_id)
+
+/*
+VALID = 'N'
+ERROR_MESSAGE = 'Person ID : ' || to_char(ln_per_person_id)
+                || ' ASG_PERSON_NUMBER: ' || lc_asg_person_number
+				|| ' MGR_PERSON_NUMBER: ' || lc_mgr_person_number
+				|| ' ASG_PERSON_ID: ' || to_char(ln_asg_person_id)
+				|| ' MGR_PERSON_ID: ' || to_char(ln_mgr_person_id)
+				|| ' MGR_USER_PERSON_ID: ' || to_char(ln_mgr_user_person_id)
+				|| ' LOGGED_USER_PERSON_ID: ' || lc_logged_user_person_id
+RETURN VALID,ERROR_MESSAGE
+*/
+
+RETURN ln_per_person_id,lc_asg_person_number,lc_mgr_person_number,ln_asg_person_id,ln_mgr_person_id,ln_mgr_user_person_id,ln_logged_user_person_id
